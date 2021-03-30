@@ -21,9 +21,9 @@ E=U*1.6022*1e-19;m=9.1094e-31;h=6.6261e-34;c=299792458;%Physical constants
 lambda=h/sqrt(2*m*E)/sqrt(1+E/(2*m*c^2));% Electron wavelength
 k=2*pi/lambda;
 
-[s0,Scat,ScatIndex] = LoadScattering90keV(Coor{4});
+[s0,Scat,ScatIndex,eta] = LoadScattering90keV(Coor{4});
 
-[eta,~] = LoadPhase90keV(Coor{4});
+% [eta,~] = LoadPhase90keV(Coor{4});
 
 [smap] = MakeSmap(N,ds,center);
 
